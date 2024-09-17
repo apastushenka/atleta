@@ -62,6 +62,7 @@ where
         }
     }
 
+    // WTF: maybe this should be in sync with `execute` call?
     fn is_precompile(&self, address: H160, _gas: u64) -> IsPrecompileResult {
         IsPrecompileResult::Answer {
             is_precompile: Self::used_addresses().contains(&address),
